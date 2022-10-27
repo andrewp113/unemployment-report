@@ -5,6 +5,7 @@ import os
 import json
 from pprint import pprint
 from statistics import mean
+from plotly.express import line
 
 import requests
 
@@ -46,3 +47,13 @@ rates_this_year = [float(d["value"]) for d in this_year]
 print("-------------------------")
 print("AVG UNEMPLOYMENT THIS YEAR:", f"{mean(rates_this_year)}%")
 print("NO MONTHS:", len(this_year))
+
+# Challenge C
+# 
+# Plot a line chart of unemployment rates over time.
+
+dates = [d["date"] for d in latest]
+rates = [float(d["value"]) for d in latest]
+
+fig = line(x=dates, y=rates, title="United States Unemployment Rate over time", labels= {"x": "Month", "y": "Unemployment Rate"})
+fig.show()
