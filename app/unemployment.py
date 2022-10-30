@@ -8,6 +8,9 @@ from statistics import mean
 from plotly.express import line
 
 import requests
+from dotenv import load_dotenv
+
+load_dotenv() 
 
 API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")
 
