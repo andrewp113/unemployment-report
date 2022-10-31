@@ -1,4 +1,5 @@
-# unemployment-report
+# unemployment-inclass-2022
+
 
 ## Setup
 
@@ -19,6 +20,7 @@ pip install -r requirements.txt
 
 ## Configuration
 
+
 [Obtain an API Key](https://www.alphavantage.co/support/#api-key) from AlphaVantage.
 
 Then create a local ".env" file and provide the key like this:
@@ -28,6 +30,7 @@ Then create a local ".env" file and provide the key like this:
 
 ALPHAVANTAGE_API_KEY="_________"
 ```
+
 
 ## Usage
 
@@ -40,15 +43,18 @@ python app/my_script.py
 Run the unemployment report:
 
 ```sh
-python app/unemployment.py
+#python app/unemployment.py
 
-# or pass envar from the command line
+# or pass env var from command line:
+#ALPHAVANTAGE_API_KEY="______" python app/unemployment.py
 
-ALPHAVANTAGE_API_KEY="abc123" python app/unemployment.py
+python -m app.unemployment
 ```
 
 Run stocks report:
 
 ```sh
-python app/stocks.py
+#python app/stocks.py
+
+python -m app.stocks
 ```
