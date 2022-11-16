@@ -1,4 +1,5 @@
 
+
 # this is the "web_app/__init__.py" file...
 
 #import os
@@ -23,6 +24,7 @@ def create_app():
     app.register_blueprint(home_routes)
     app.register_blueprint(stocks_routes)
     app.register_blueprint(unemployment_routes)
+
     #app.register_blueprint(book_routes)
     #app.register_blueprint(weather_routes)
     return app
